@@ -1,0 +1,111 @@
+body{
+    background: #d6d5d5;
+    font-size:14px;
+    font-family: Verdana,sans-serif;
+}
+.container{
+    width: 500px;
+    margin:8px auto;
+    background-color: rgb(240, 246, 247);
+    border-radius: 4px;
+    padding:36px;
+    position: relative;top:200px;
+}
+#starttext{
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif
+}
+#remaining{
+    color: #8d8d8d;
+    font-size: 24px;
+}
+#timer{
+    color: white;
+    text-align: center;
+    background:rgb(5, 10, 58);
+    height: 50px;
+    font-size: 40px;
+    width: 250px;
+    margin-bottom: 15px;
+    position: relative;top:200px;left:360px;
+    border-radius: 4px;
+    user-select: none;
+}
+#question{
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+#choices{
+    list-style: none;
+    padding:0px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+#choices > li{
+    border:1px solid rgb(163, 163, 163);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#choices > li:hover{
+    background: #f8f8f8;
+}
+#choices > li.correct{
+    background: #d4edda;
+    border-color:#c3e6cb ;
+    color: #155724;
+    font-weight: bold;
+}
+#choices > li.correct::after{
+    content:"....正解!";
+}
+#choices > li.wrong::after{
+    content:"....残念!";
+    }
+#choices > li.wrong{
+    background: #f8d8da;
+    border-color:#f5c6cb ;
+    color: #721c24;
+    font-weight: bold;
+    }
+#btn,#result > a{
+    background: #fc4343;
+    padding:8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    box-shadow:0 4px 0 #c25454;
+    user-select: none;
+}
+#btn.disabeled{
+    background: #ccc;
+    box-shadow: 0 4px 0 #bbb;
+    opacity: 0.7;
+}
+#result{
+    position:absolute;
+    width: 300px;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    top:50px;
+    left:0;
+    right: 0;
+    margin:0 auto;
+    border-radius: 4px;
+    text-align: center;
+    transition: 0.4s;
+}
+#result.hedden{
+    transform: translateY(-500px);
+}
+#result > p{
+    font-size:24px;
+}
+#result > a{
+    display: block;
+    text-decoration: none;
+}
